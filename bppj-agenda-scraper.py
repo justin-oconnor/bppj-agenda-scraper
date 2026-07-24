@@ -11,7 +11,7 @@ url = 'https://www.bossierparishla.gov/police-jury/meetings-and-agendas/upcoming
 headers = {'User-Agent': f'Justin O\'Connor / The Advocate - {os.environ["WORK_EMAIL"]}'}
 
 # Makes the request and turns the html into soup for parsing
-r = requests.get(url, headers=headers)
+r = requests.get(url, headers=headers, timeout=30)
 soup = BeautifulSoup(r.text, 'html.parser')
 
 # Finds the list of agendas and extracts the title and link for each agenda
