@@ -8,7 +8,7 @@ from email.mime.text import MIMEText
 
 # Sets up the URL and headers for the request
 url = 'https://www.bossierparishla.gov/police-jury/meetings-and-agendas/upcoming-meeting-agenda'
-headers = {'User-Agent': f'Justin O\'Connor / The Advocate - {os.environ["WORK_EMAIL"]}'}
+headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'}
 
 # Makes the request and turns the html into soup for parsing
 r = requests.get(url, headers=headers, timeout=30)
